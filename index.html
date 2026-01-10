@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RABE STUDIO — Legacy · Creativity · Care</title>
+  <meta name="description" content="RABE STUDIO — Works, visions and stories built for legacy: creativity, care and human presence." />
+
+  <!-- ✅ ALWAYS ABSOLUTE PATHS -->
+  <link rel="icon" href="/assets/favicon.svg" />
+  <link rel="stylesheet" href="/assets/style.css" />
+
+  <!-- Optional: fonts (remove if you already load them in style.css) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* Minimal safety styles in case style.css is missing */
+    :root { color-scheme: dark; }
+    body { margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+    a { color: inherit; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+
+    /* If your style.css already defines these, it will override them */
+    .topbar { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(10px); background: rgba(5,5,7,0.55); border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 16px 20px; }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .brand { display:flex; align-items:center; gap:12px; text-decoration:none; }
+    .brand img { width: 40px; height: 40px; object-fit: contain; }
+    .brand strong { letter-spacing: .06em; }
+    .menu { display:flex; align-items:center; gap:14px; opacity:.95; }
+    .menu a { text-decoration:none; opacity:.9; }
+    .menu a:hover { opacity: 1; }
+    .lang { display:flex; gap:8px; align-items:center; }
+    .lang a { font-size: 12px; text-decoration:none; border:1px solid rgba(255,255,255,.14); padding:6px 10px; border-radius: 999px; opacity:.9; }
+    .lang a:hover { opacity: 1; border-color: rgba(255,255,255,.25); }
+
+    .hero { background: radial-gradient(circle at 20% 0%, rgba(212,175,55,.14), rgba(5,5,7,1) 55%); }
+    .hero-grid { display:grid; grid-template-columns: 1.2fr .8fr; gap: 22px; padding: 34px 20px 26px; }
+    @media (max-width: 860px){ .hero-grid { grid-template-columns: 1fr; } }
+    .kicker { opacity:.75; letter-spacing:.08em; font-size: 12px; text-transform: uppercase; }
+    h1 { margin: 10px 0 8px; font-family: "Cormorant Garamond", serif; font-weight: 600; letter-spacing:.03em; font-size: 44px; }
+    .sub { opacity:.9; max-width: 58ch; line-height: 1.55; }
+    .cta { display:flex; gap:12px; flex-wrap: wrap; margin-top: 18px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding: 12px 14px; border-radius: 12px; text-decoration:none; border:1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.04); }
+    .btn:hover { border-color: rgba(255,255,255,.25); }
+    .btn.primary { border-color: rgba(212,175,55,.4); background: rgba(212,175,55,.10); }
+    .card { border:1px solid rgba(255,255,255,.10); border-radius: 16px; background: rgba(255,255,255,.03); padding: 16px; }
+    .grid3 { display:grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    @media (max-width: 860px){ .grid3 { grid-template-columns: 1fr; } }
+    .muted { opacity:.75; }
+    .section { padding: 10px 20px 26px; }
+    footer { border-top: 1px solid rgba(255,255,255,.08); background: rgba(0,0,0,.22); }
+    .foot { display:flex; justify-content:space-between; gap:12px; flex-wrap: wrap; padding: 18px 20px; opacity:.85; font-size: 13px; }
+  </style>
+</head>
+
+<body>
+  <!-- Top Navigation -->
+  <div class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="/">
+        <img src="/assets/logo-glow.png" alt="RABE logo" onerror="this.style.display='none'"/>
+        <div>
+          <strong>RABE STUDIO</strong><br>
+          <span class="muted" style="font-size:12px;">Legacy · Creativity · Care</span>
+        </div>
+      </a>
+
+      <nav class="menu" aria-label="Primary">
+        <a href="/en/vision.html">Vision</a>
+        <a href="/en/works.html">Works</a>
+        <a href="/en/catalog.html">Store</a>
+        <a href="/en/hith.html">HITH</a>
+      </nav>
+
+      <div class="lang" aria-label="Language">
+        <!-- Root is “gateway”; these go to actual language homes -->
+        <a href="/en/" title="English">EN</a>
+        <a href="/it/" title="Italiano">IT</a>
+        <a href="/de/" title="Deutsch">DE</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="kicker">A studio of legacy</div>
+        <h1>RABE STUDIO</h1>
+        <p class="sub">
+          Works, images and visions that become inheritance.
+          A place where psychology, art and spirituality meet — for healing, growth and lasting connection.
+        </p>
+
+        <div class="cta">
+          <a class="btn primary" href="/en/vision.html">Read the Vision</a>
+          <a class="btn" href="/en/works.html">View all Works</a>
+          <a class="btn" href="/en/catalog.html">Open the Store</a>
+        </div>
+
+        <p class="muted" style="margin-top:14px;font-size:13px;">
+          Prefer another language? Choose: <a href="/it/">Italiano</a> · <a href="/de/">Deutsch</a>
+        </p>
+      </div>
+
+      <aside class="card" aria-label="Featured">
+        <div class="kicker">Featured</div>
+        <div class="muted" style="margin-top:8px; line-height:1.5;">
+          A few starting points — curated, not crowded.
+        </div>
+
+        <div style="height:12px"></div>
+
+        <div class="card" style="padding:14px; margin-bottom:10px;">
+          <strong>Sankofa</strong><br>
+          <span class="muted">A universal modern novel.</span><br>
+          <a class="btn" style="margin-top:10px; width:100%; justify-content:center;" href="/en/works/sankofa.html">Open</a>
+        </div>
+
+        <div class="card" style="padding:14px; margin-bottom:10px;">
+          <strong>Grace</strong><br>
+          <span class="muted">A spiritual companion.</span><br>
+          <a class="btn" style="margin-top:10px; width:100%; justify-content:center;" href="/en/works/grace.html">Open</a>
+        </div>
+
+        <div class="card" style="padding:14px;">
+          <strong>Empire from the Bed — Poster</strong><br>
+          <span class="muted">Black & gold art print.</span><br>
+          <a class="btn" style="margin-top:10px; width:100%; justify-content:center;" href="/en/products/empire-poster.html">Open</a>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <!-- Quick tiles -->
+  <main class="wrap section">
+    <h2 style="font-family:'Cormorant Garamond',serif; font-size:28px; margin: 6px 0 12px;">Start here</h2>
+
+    <div class="grid3">
+      <section class="card">
+        <strong>Vision</strong>
+        <p class="muted" style="line-height:1.5;">
+          Why this exists — and what kind of future it’s trying to protect.
+        </p>
+        <a class="btn" href="/en/vision.html">Read</a>
+      </section>
+
+      <section class="card">
+        <strong>Works</strong>
+        <p class="muted" style="line-height:1.5;">
+          Novels, reflections, posters and projects — curated as a catalog of meaning.
+        </p>
+        <a class="btn" href="/en/works.html">Browse</a>
+      </section>
+
+      <section class="card">
+        <strong>HITH</strong>
+        <p class="muted" style="line-height:1.5;">
+          A private digital presence for reflection — not advice, not therapy, just space.
+        </p>
+        <a class="btn" href="/en/hith.html">Explore</a>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap foot">
+      <div>© <span id="y"></span> RABE STUDIO — Legacy · Creativity · Care</div>
+      <div class="muted">No cookies · <a href="mailto:contact@rabestudio.com">contact@rabestudio.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
