@@ -1,285 +1,610 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta name="google-site-verification" content="c7WTBhPpqAOwDgZE9hq94UkptjY_JJdY-Yau9KGqb_I" />
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<meta name="description" content="Rabe Multimedia develops Human Systems (DI, RABE Event Management), Digital Presence tools (HITH Bot, Legacy App) and Cultural Narrative projects across institutions, digital environments and creative work." />
+  <head>
+    <meta name="google-site-verification" content="c7WTBhPpqAOwDgZE9hq94UkptjY_JJdY-Yau9KGqb_I" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="RABE develops Human Systems (DI, RABE Event Management), Digital Presence tools (HITH Bot, Legacy App) and Cultural Narrative projects across institutions, digital environments and creative work."
+    />
 
-<title>Rabe Multimedia — Cultural Systems & Human Presence</title>
+    <title>Rabe Multimedia — Cultural Systems & Human Presence</title>
 
-<link rel="icon" type="image/png" href="favicon.png" />
-<link rel="canonical" href="https://rabemultimedia.netlify.app/" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="canonical" href="https://rabemultimedia.netlify.app/" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Fonts (simple + premium feel) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-<style>
-:root{
---bg:#0b0b0b;
---panel:rgba(255,255,255,0.03);
---text:rgba(255,255,255,0.88);
---muted:rgba(255,255,255,0.65);
---muted2:rgba(255,255,255,0.52);
---gold:#d4af37;
---gold2:rgba(212,175,55,0.18);
---max:1120px;
---radius:18px;
---shadow:0 18px 40px rgba(0,0,0,0.55);
-}
+    <style>
+      :root {
+        --bg: #0b0b0b;
+        --panel: rgba(255, 255, 255, 0.03);
+        --text: rgba(255, 255, 255, 0.88);
+        --muted: rgba(255, 255, 255, 0.65);
+        --muted2: rgba(255, 255, 255, 0.52);
+        --gold: #d4af37;
+        --gold2: rgba(212, 175, 55, 0.18);
+        --max: 1120px;
+        --radius: 18px;
+        --shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+      }
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
 
-body{
-margin:0;
-background:
-radial-gradient(1200px 500px at 20% 0%, rgba(212,175,55,0.08), transparent 60%),
-radial-gradient(900px 500px at 80% 10%, rgba(212,175,55,0.05), transparent 60%),
-var(--bg);
-color:var(--text);
-font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
-line-height:1.6;
-}
+      body {
+        margin: 0;
+        background:
+          radial-gradient(1200px 500px at 20% 0%, rgba(212, 175, 55, 0.08), transparent 60%),
+          radial-gradient(900px 500px at 80% 10%, rgba(212, 175, 55, 0.05), transparent 60%),
+          var(--bg);
+        color: var(--text);
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        line-height: 1.6;
+        letter-spacing: 0.2px;
+      }
 
-a{color:inherit;text-decoration:none}
+      a { color: inherit; text-decoration: none; }
 
-.wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+      /* Layout */
+      .wrap {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 22px;
+      }
 
-/* NAV */
-.nav{
-position:sticky;
-top:0;
-z-index:50;
-backdrop-filter:blur(10px);
-background:rgba(11,11,11,0.65);
-border-bottom:1px solid rgba(255,255,255,0.06);
-}
-.nav-inner{
-display:flex;
-align-items:center;
-justify-content:space-between;
-height:74px;
-}
-.logo-img{
-height:46px;
-display:block;
-}
-.menu{
-display:flex;
-gap:18px;
-font-size:13px;
-color:var(--muted);
-}
-.menu a{
-padding:8px 10px;
-border-radius:999px;
-transition:.2s;
-}
-.menu a:hover{
-background:rgba(255,255,255,0.06);
-color:var(--text);
-}
-.btn{
-padding:9px 14px;
-border-radius:999px;
-border:1px solid rgba(255,255,255,0.14);
-background:rgba(255,255,255,0.02);
-font-size:13px;
-cursor:pointer;
-transition:.2s;
-}
-.btn:hover{
-background:rgba(255,255,255,0.06);
-}
-.btn.gold{
-border-color:rgba(212,175,55,0.4);
-background:rgba(212,175,55,0.1);
-}
-.btn.gold:hover{
-background:rgba(212,175,55,0.15);
-}
+      /* Top Nav */
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        backdrop-filter: blur(10px);
+        background: rgba(11, 11, 11, 0.65);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 74px;
+      }
 
-/* HERO */
-.hero{
-padding:120px 0 70px;
-text-align:center;
-}
-.hero-logo{
-height:150px;
-margin-bottom:25px;
-}
-.hero-sub{
-font-size:16px;
-color:var(--muted);
-max-width:60ch;
-margin:0 auto 30px;
-}
-.hero-actions{
-display:flex;
-justify-content:center;
-gap:14px;
-flex-wrap:wrap;
-}
+      .brand {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        min-width: 130px;
+      }
 
-/* Sections */
-section{padding:80px 0}
-.pillar{
-font-size:12px;
-letter-spacing:1.3px;
-text-transform:uppercase;
-color:var(--gold);
-margin-bottom:14px;
-}
-.section-intro{
-color:var(--muted);
-max-width:70ch;
-margin-bottom:28px;
-}
-.grid-2{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-}
-.card{
-background:var(--panel);
-border:1px solid rgba(255,255,255,0.08);
-border-radius:var(--radius);
-padding:24px;
-box-shadow:var(--shadow);
-}
-.card h3{margin-top:0}
-.bullets{padding-left:18px;color:var(--muted)}
-.bullets li{margin:8px 0}
+      /* ✅ Nav logo mark (symbol only) */
+      .logo-img {
+        height: 46px;
+        width: auto;
+        display: block;
+      }
 
-/* Responsive */
-@media(max-width:900px){
-.grid-2{grid-template-columns:1fr}
-.menu{display:none}
-.hero-logo{height:120px}
-}
-</style>
-</head>
+      .menu {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .menu a {
+        padding: 8px 10px;
+        border-radius: 999px;
+        transition: background 0.2s ease, color 0.2s ease;
+      }
+      .menu a:hover {
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--text);
+      }
 
-<body>
+      .cta { display: flex; gap: 10px; align-items: center; }
 
-<div class="nav">
-<div class="wrap nav-inner">
-<a href="#">
-<img src="logo-mark.png" alt="RABE" class="logo-img">
-</a>
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.02);
+        color: var(--text);
+        font-size: 13px;
+        transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
+        cursor: pointer;
+        user-select: none;
+        white-space: nowrap;
+      }
+      .btn:hover {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(255, 255, 255, 0.18);
+        transform: translateY(-1px);
+      }
+      .btn.gold {
+        border-color: rgba(212, 175, 55, 0.35);
+        background: rgba(212, 175, 55, 0.1);
+      }
+      .btn.gold:hover {
+        background: rgba(212, 175, 55, 0.14);
+        border-color: rgba(212, 175, 55, 0.5);
+      }
+      .btn.ghost {
+        border-color: rgba(255, 255, 255, 0.1);
+        background: transparent;
+      }
 
-<nav class="menu">
-<a href="#human">Human Systems</a>
-<a href="#digital">Digital Systems</a>
-<a href="#culture">Narrative & Culture</a>
-<a href="#contact">Contact</a>
-</nav>
+      /* Hero */
+      .hero { padding: 92px 0 44px; }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.25fr 0.75fr;
+        gap: 22px;
+        align-items: start;
+      }
 
-<a class="btn gold" href="#contact">Inquiries</a>
-</div>
-</div>
+      /* ✅ Hero full logo (no slogan) */
+      .hero-logo {
+        height: 150px;
+        width: auto;
+        display: block;
+        margin: 0 0 18px;
+      }
 
-<header class="hero">
-<div class="wrap">
-<img src="logo-full.png" class="hero-logo" alt="RABE Logo">
+      .kicker {
+        display: inline-flex;
+        gap: 10px;
+        align-items: center;
+        font-size: 12px;
+        color: var(--muted);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.02);
+        padding: 8px 12px;
+        border-radius: 999px;
+        width: fit-content;
+      }
+      .dot {
+        width: 7px; height: 7px;
+        border-radius: 999px;
+        background: var(--gold);
+        box-shadow: 0 0 0 4px var(--gold2);
+      }
 
-<p class="hero-sub">
-Human Systems. Digital Presence. Cultural Narrative.
-We design structured environments where continuity and humanity meet.
-</p>
+      .hero-sub {
+        font-size: 16px;
+        max-width: 56ch;
+        color: var(--muted);
+        margin: 0 0 22px;
+      }
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 14px;
+      }
 
-<div class="hero-actions">
-<a class="btn gold" href="#human">Explore</a>
-<a class="btn" href="#contact">Contact</a>
-</div>
-</div>
-</header>
+      .card {
+        background: var(--panel);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+      .hero-card { padding: 18px; }
+      .hero-card .title {
+        font-size: 12px;
+        color: var(--muted2);
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      .hero-card ul {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .hero-card li { margin: 8px 0; }
+      .gold { color: var(--gold); }
 
-<section id="human">
-<div class="wrap">
-<div class="pillar">HUMAN SYSTEMS</div>
-<p class="section-intro">
-Frameworks designed to support real people in real environments.
-</p>
+      /* Sections */
+      section { padding: 72px 0; }
+      .section-head { margin-bottom: 18px; }
+      .pillar {
+        display: inline-block;
+        font-size: 12px;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: var(--gold);
+        background: rgba(212, 175, 55, 0.08);
+        border: 1px solid rgba(212, 175, 55, 0.22);
+        padding: 8px 12px;
+        border-radius: 999px;
+      }
+      .section-intro {
+        margin-top: 12px;
+        color: var(--muted);
+        max-width: 70ch;
+      }
 
-<div class="grid-2">
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin-top: 22px;
+      }
 
-<div class="card">
-<h3>DI — Human Presence Framework</h3>
-<p>
-A relational structure developed for institutions and structured environments where emotional climate requires steadiness.
-</p>
-<ul class="bullets">
-<li>Ease relational tension</li>
-<li>Support emotional regulation</li>
-<li>Restore structure to transition moments</li>
-</ul>
-</div>
+      .block { padding: 22px; }
+      .block h3 {
+        margin: 0 0 10px;
+        font-weight: 600;
+        font-size: 18px;
+        letter-spacing: 0.2px;
+      }
+      .block .meta { color: var(--muted2); font-size: 12px; margin-bottom: 10px; }
+      .block p { margin: 0 0 14px; color: var(--muted); }
 
-<div class="card">
-<h3>RABE Event Management</h3>
-<p>
-An operational coordination platform connecting organisers and collaborators.
-</p>
-<ul class="bullets">
-<li>Share events</li>
-<li>Define roles</li>
-<li>Managed coordination</li>
-</ul>
-</div>
+      .bullets {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .bullets li { margin: 8px 0; }
 
-</div>
-</div>
-</section>
+      .actions-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 16px;
+      }
 
-<section id="digital">
-<div class="wrap">
-<div class="pillar">DIGITAL SYSTEMS</div>
-<p class="section-intro">
-Digital tools built for depth, not performance.
-</p>
+      /* Media Links */
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+      .linkchip {
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.02);
+        padding: 10px 12px;
+        border-radius: 999px;
+        font-size: 13px;
+        color: var(--muted);
+        transition: background 0.2s ease, transform 0.15s ease;
+      }
+      .linkchip:hover {
+        background: rgba(255, 255, 255, 0.06);
+        transform: translateY(-1px);
+        color: var(--text);
+      }
 
-<div class="grid-2">
+      /* Contact */
+      form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-top: 16px;
+      }
+      input, textarea {
+        width: 100%;
+        padding: 12px 12px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.02);
+        color: var(--text);
+        outline: none;
+        font: inherit;
+      }
+      textarea {
+        grid-column: 1 / -1;
+        min-height: 120px;
+        resize: vertical;
+      }
+      input::placeholder, textarea::placeholder { color: rgba(255, 255, 255, 0.38); }
+      .form-actions {
+        grid-column: 1 / -1;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .note { color: var(--muted2); font-size: 12px; }
 
-<div class="card">
-<h3>HITH Bot</h3>
-<p>Private reflection companion via Telegram.</p>
-</div>
+      /* Footer */
+      footer {
+        padding: 40px 0 50px;
+        color: var(--muted2);
+        font-size: 12px;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .footer-inner {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .footer-tag {
+        color: rgba(255,255,255,0.52);
+        letter-spacing: 0.6px;
+      }
 
-<div class="card">
-<h3>Legacy App</h3>
-<p>Digital memory architecture for continuity.</p>
-</div>
+      /* Responsive */
+      @media (max-width: 900px) {
+        .hero-grid { grid-template-columns: 1fr; }
+        .menu { display: none; }
+        .hero-logo { height: 120px; }
+      }
+      @media (max-width: 720px) {
+        .grid-2 { grid-template-columns: 1fr; }
+        form { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
 
-</div>
-</div>
-</section>
+  <body>
+    <!-- NAV -->
+    <div class="nav">
+      <div class="wrap nav-inner">
+        <div class="brand">
+          <a href="#" aria-label="RABE Home">
+            <img src="logo-mark.png" alt="RABE" class="logo-img" />
+          </a>
+        </div>
 
-<section id="culture">
-<div class="wrap">
-<div class="pillar">NARRATIVE & CULTURE</div>
-<p class="section-intro">Music. Stories. Art. Thought.</p>
-</div>
-</section>
+        <nav class="menu" aria-label="Primary">
+          <a href="#human">Human Systems</a>
+          <a href="#digital">Digital Systems</a>
+          <a href="#culture">Narrative &amp; Culture</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-<section id="contact">
-<div class="wrap">
-<div class="pillar">CONTACT</div>
-<p class="section-intro">
-Collaborations. Institutions. Partnerships.
-</p>
-</div>
-</section>
+        <div class="cta">
+          <a class="btn gold" href="#contact">Inquiries</a>
+        </div>
+      </div>
+    </div>
 
-<footer style="padding:50px 0;text-align:center;color:var(--muted2);border-top:1px solid rgba(255,255,255,0.06)">
-© <span id="year"></span> Rabe Multimedia — The soul of Legacy is Rabe.
-</footer>
+    <!-- HERO -->
+    <header class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="kicker"><span class="dot" aria-hidden="true"></span> Presence. Legacy. Narrative.</div>
 
-<script>
-document.getElementById("year").textContent=new Date().getFullYear();
-</script>
+          <!-- ✅ Full logo (no slogan) -->
+          <img src="logo-full.png" class="hero-logo" alt="RABE Logo" />
 
-</body>
+          <p class="hero-sub">
+            Human Systems. Digital Presence. Cultural Narrative.<br />
+            We design spaces where structure and humanity meet — across institutions, digital environments, and creative work.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn gold" href="#human">Explore</a>
+            <a class="btn ghost" href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <aside class="card hero-card" aria-label="Overview">
+          <div class="title">Ecosystem</div>
+          <ul>
+            <li><span class="gold">DI</span> — Human Presence Framework</li>
+            <li><span class="gold">RABE Event Management</span> — Operational coordination platform</li>
+            <li><span class="gold">HITH Bot</span> — Telegram &amp; WhatsApp reflection companion</li>
+            <li><span class="gold">Legacy App</span> — Digital memory architecture</li>
+            <li><span class="gold">Narrative &amp; Culture</span> — Music, stories, art, thought</li>
+          </ul>
+        </aside>
+      </div>
+    </header>
+
+    <!-- HUMAN SYSTEMS -->
+    <section id="human">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="pillar">HUMAN SYSTEMS</div>
+          <p class="section-intro">Frameworks designed to support real people in real environments.</p>
+        </div>
+
+        <div class="grid-2">
+          <!-- DI -->
+          <article class="card block">
+            <h3>DI — Human Presence Framework</h3>
+            <div class="meta">Care institutions • Hospitality • Structured settings</div>
+            <p>
+              DI is a relational approach created for care institutions, hospitality environments and structured settings where
+              unstructured time can shape emotional climate.
+            </p>
+            <p>It is not therapy. It is not entertainment. It is a way of restoring steadiness.</p>
+            <ul class="bullets">
+              <li>Ease relational tension</li>
+              <li>Support emotional regulation</li>
+              <li>Bring meaning back to waiting and transition moments</li>
+            </ul>
+            <div class="actions-row">
+              <a class="btn gold" href="mailto:emiliabenneh@gmail.com?subject=DI%20—%20Institutional%20Inquiry">Institutional inquiries</a>
+              <a class="btn" href="#contact">Contact</a>
+            </div>
+          </article>
+
+          <!-- Events -->
+          <article class="card block">
+            <h3>RABE Event Management</h3>
+            <div class="meta">Operational platform • Events • Staffing coordination</div>
+            <p>A coordination platform connecting event organisers and collaborators.</p>
+
+            <p><strong>For organisers</strong></p>
+            <ul class="bullets">
+              <li>Share upcoming events</li>
+              <li>Define needed roles</li>
+              <li>Coordinate staffing with support</li>
+            </ul>
+
+            <p style="margin-top: 12px"><strong>For collaborators</strong></p>
+            <ul class="bullets">
+              <li>Discover opportunities</li>
+              <li>Express interest</li>
+              <li>Connect through a managed process</li>
+            </ul>
+
+            <!-- ✅ No dead links -->
+            <div class="actions-row">
+              <a class="btn gold" href="#contact">Submit Event</a>
+              <a class="btn" href="#contact">Join as Collaborator</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIGITAL SYSTEMS -->
+    <section id="digital">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="pillar">DIGITAL SYSTEMS</div>
+          <p class="section-intro">Digital tools built for depth, not performance.</p>
+        </div>
+
+        <div class="grid-2">
+          <!-- HITH -->
+          <article class="card block">
+            <h3>HITH Bot</h3>
+            <div class="meta">Telegram • WhatsApp • Private reflection</div>
+            <p>A reflection companion available on Telegram and WhatsApp.</p>
+            <ul class="bullets">
+              <li>Guided journaling</li>
+              <li>Private thought processing</li>
+              <li>Calm, grounded responses</li>
+            </ul>
+            <p style="margin-top: 10px">No public feed. No audience. No pressure to perform.</p>
+            <div class="actions-row">
+              <a class="btn gold" href="https://t.me/EverGraceRabeBot" target="_blank" rel="noopener">Open on Telegram</a>
+              <span class="btn">WhatsApp (soon)</span>
+            </div>
+          </article>
+
+          <!-- Legacy -->
+          <article class="card block">
+            <h3>Legacy App</h3>
+            <div class="meta">Digital memory • Future messages • Family continuity</div>
+            <p>A digital memory space designed for continuity.</p>
+            <ul class="bullets">
+              <li>Write messages for the future</li>
+              <li>Preserve values and reflections</li>
+              <li>Create private archives for family</li>
+            </ul>
+            <p style="margin-top: 10px">It is not about visibility. It is about continuity.</p>
+            <div class="actions-row">
+              <a class="btn gold" href="#contact">Learn about Legacy</a>
+              <a class="btn" href="#contact">Contact</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- NARRATIVE & CULTURE -->
+    <section id="culture">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="pillar">NARRATIVE &amp; CULTURE</div>
+          <p class="section-intro">Music. Stories. Art. Thought.</p>
+        </div>
+
+        <div class="card block">
+          <p style="margin-top: 0">
+            RABE explores identity and presence through music, writing, cultural reflection, and a visual archive —
+            <em>My Travel, My Art</em>.
+          </p>
+
+          <div class="links" aria-label="Social Links">
+            <a class="linkchip" href="#" target="_blank" rel="noopener">Instagram</a>
+            <a class="linkchip" href="https://www.youtube.com/@Rabemultimedia" target="_blank" rel="noopener">YouTube</a>
+            <a class="linkchip" href="https://suno.com/invite/@rabesongs" target="_blank" rel="noopener">Suno</a>
+            <a class="linkchip" href="https://www.linkedin.com/in/emilia-benneh-071416170/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="linkchip" href="https://www.facebook.com/profile.php?id=61578447634779" target="_blank" rel="noopener">Facebook</a>
+          </div>
+
+          <p class="note" style="margin-top: 14px">
+            Tip: keep this section link-only for v1. No embedded feeds. Clean exits.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="pillar">CONTACT</div>
+          <p class="section-intro">Collaborations. Institutions. Partnerships. Let’s build something that holds.</p>
+        </div>
+
+        <div class="card block">
+          <p style="margin: 0 0 6px; color: var(--muted)">Email</p>
+          <p style="margin: 0 0 14px">
+            <a class="gold" href="mailto:emiliabenneh@gmail.com">emiliabenneh@gmail.com</a>
+          </p>
+
+          <form id="contactForm">
+            <input name="name" placeholder="Name" autocomplete="name" required />
+            <input name="email" type="email" placeholder="Email" autocomplete="email" required />
+            <textarea name="message" placeholder="Message" required></textarea>
+
+            <div class="form-actions">
+              <button class="btn gold" type="submit">Send</button>
+              <span class="note">This sends via your email app (no backend required).</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap footer-inner">
+        <div>
+          © <span id="year"></span> RABE. All rights reserved.
+          <span class="footer-tag"> — The soul of Legacy is RABE.</span>
+        </div>
+        <div style="display:flex; gap:12px; align-items:center;">
+          <a href="#human">Human</a>
+          <a href="#digital">Digital</a>
+          <a href="#culture">Culture</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const form = document.getElementById("contactForm");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        const name = encodeURIComponent(data.get("name"));
+        const email = encodeURIComponent(data.get("email"));
+        const message = encodeURIComponent(data.get("message"));
+
+        const subject = `RABE Inquiry — ${decodeURIComponent(name)}`;
+        const body =
+          `Name: ${decodeURIComponent(name)}\n` +
+          `Email: ${decodeURIComponent(email)}\n\n` +
+          `${decodeURIComponent(message)}`;
+
+        window.location.href =
+          `mailto:emiliabenneh@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      });
+    </script>
+  </body>
 </html>
