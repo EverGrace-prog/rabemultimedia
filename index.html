@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="Rabe Multimedia develops Human Systems (DI, RABE Event Management), Digital Presence tools (HITH Bot, Legacy App) and Cultural Narrative projects across institutions, digital environments and creative work."
+      content="RABE develops Human Systems (DI, RABE Event Management), Digital Presence tools (HITH Bot, Legacy App) and Cultural Narrative projects across institutions, digital environments and creative work."
     />
 
     <title>Rabe Multimedia — Cultural Systems & Human Presence</title>
@@ -35,22 +35,27 @@
         --shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
       }
 
-      * { box-sizing: border-box; }
-      html { scroll-behavior: smooth; }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
 
       body {
         margin: 0;
-        background:
-          radial-gradient(1200px 500px at 20% 0%, rgba(212, 175, 55, 0.08), transparent 60%),
-          radial-gradient(900px 500px at 80% 10%, rgba(212, 175, 55, 0.05), transparent 60%),
-          var(--bg);
+        background: radial-gradient(1200px 500px at 20% 0%, rgba(212, 175, 55, 0.08), transparent 60%),
+          radial-gradient(900px 500px at 80% 10%, rgba(212, 175, 55, 0.05), transparent 60%), var(--bg);
         color: var(--text);
         font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
         line-height: 1.6;
         letter-spacing: 0.2px;
       }
 
-      a { color: inherit; text-decoration: none; }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
 
       .wrap {
         max-width: var(--max);
@@ -58,7 +63,7 @@
         padding: 0 22px;
       }
 
-      /* NAV */
+      /* Top Nav */
       .nav {
         position: sticky;
         top: 0;
@@ -74,9 +79,14 @@
         height: 74px;
       }
 
-      .brand { display: flex; align-items: center; gap: 10px; min-width: 130px; }
+      .brand {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        min-width: 130px;
+      }
 
-      /* ✅ Keep working file name */
+      /* Nav logo mark (using existing filename to avoid setbacks) */
       .logo-img {
         height: 46px;
         width: auto;
@@ -95,9 +105,16 @@
         border-radius: 999px;
         transition: background 0.2s ease, color 0.2s ease;
       }
-      .menu a:hover { background: rgba(255,255,255,0.06); color: var(--text); }
+      .menu a:hover {
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--text);
+      }
 
-      .cta { display:flex; align-items:center; gap:10px; }
+      .cta {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
 
       .btn {
         display: inline-flex;
@@ -128,10 +145,15 @@
         background: rgba(212, 175, 55, 0.14);
         border-color: rgba(212, 175, 55, 0.5);
       }
-      .btn.ghost { border-color: rgba(255, 255, 255, 0.1); background: transparent; }
+      .btn.ghost {
+        border-color: rgba(255, 255, 255, 0.1);
+        background: transparent;
+      }
 
-      /* HERO */
-      .hero { padding: 92px 0 44px; }
+      /* Hero */
+      .hero {
+        padding: 92px 0 44px;
+      }
       .hero-grid {
         display: grid;
         grid-template-columns: 1.25fr 0.75fr;
@@ -139,7 +161,7 @@
         align-items: start;
       }
 
-      /* ✅ Keep working file name */
+      /* Hero full logo (no slogan) */
       .hero-logo {
         height: 150px;
         width: auto;
@@ -160,7 +182,8 @@
         width: fit-content;
       }
       .dot {
-        width: 7px; height: 7px;
+        width: 7px;
+        height: 7px;
         border-radius: 999px;
         background: var(--gold);
         box-shadow: 0 0 0 4px var(--gold2);
@@ -172,7 +195,12 @@
         color: var(--muted);
         margin: 0 0 22px;
       }
-      .hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:14px; }
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 14px;
+      }
 
       .card {
         background: var(--panel);
@@ -180,7 +208,9 @@
         border-radius: var(--radius);
         box-shadow: var(--shadow);
       }
-      .hero-card { padding: 18px; }
+      .hero-card {
+        padding: 18px;
+      }
       .hero-card .title {
         font-size: 12px;
         color: var(--muted2);
@@ -188,13 +218,57 @@
         text-transform: uppercase;
         margin-bottom: 10px;
       }
-      .hero-card ul { margin:0; padding-left:18px; color: var(--muted); font-size: 13px; }
-      .hero-card li { margin: 8px 0; }
-      .gold { color: var(--gold); }
+      .hero-card ul {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .hero-card li {
+        margin: 8px 0;
+      }
+      .gold {
+        color: var(--gold);
+      }
 
-      /* SECTIONS */
-      section { padding: 72px 0; }
-      .section-head { margin-bottom: 18px; }
+      /* Founder */
+      .founder {
+        padding: 40px 0 10px;
+      }
+      .founder-card {
+        padding: 28px;
+        max-width: 820px;
+        margin: 0 auto;
+      }
+      .founder-title {
+        font-size: 13px;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 18px;
+      }
+      .founder-card p {
+        color: var(--muted);
+        margin: 0 0 14px;
+        line-height: 1.7;
+      }
+      .founder-signature {
+        margin-top: 20px;
+        color: var(--text);
+        font-weight: 500;
+      }
+      .founder-role {
+        color: var(--muted2);
+        font-size: 12px;
+      }
+
+      /* Sections */
+      section {
+        padding: 72px 0;
+      }
+      .section-head {
+        margin-bottom: 18px;
+      }
       .pillar {
         display: inline-block;
         font-size: 12px;
@@ -206,7 +280,11 @@
         padding: 8px 12px;
         border-radius: 999px;
       }
-      .section-intro { margin-top: 12px; color: var(--muted); max-width: 70ch; }
+      .section-intro {
+        margin-top: 12px;
+        color: var(--muted);
+        max-width: 70ch;
+      }
 
       .grid-2 {
         display: grid;
@@ -215,18 +293,49 @@
         margin-top: 22px;
       }
 
-      .block { padding: 22px; }
-      .block h3 { margin: 0 0 10px; font-weight: 600; font-size: 18px; }
-      .block .meta { color: var(--muted2); font-size: 12px; margin-bottom: 10px; }
-      .block p { margin: 0 0 14px; color: var(--muted); }
+      .block {
+        padding: 22px;
+      }
+      .block h3 {
+        margin: 0 0 10px;
+        font-weight: 600;
+        font-size: 18px;
+        letter-spacing: 0.2px;
+      }
+      .block .meta {
+        color: var(--muted2);
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+      .block p {
+        margin: 0 0 14px;
+        color: var(--muted);
+      }
 
-      .bullets { margin: 0; padding-left: 18px; color: var(--muted); font-size: 14px; }
-      .bullets li { margin: 8px 0; }
+      .bullets {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .bullets li {
+        margin: 8px 0;
+      }
 
-      .actions-row { display:flex; flex-wrap:wrap; gap:10px; margin-top: 16px; }
+      .actions-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 16px;
+      }
 
-      /* Social links */
-      .links { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+      /* Media Links */
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
       .linkchip {
         border: 1px solid rgba(255, 255, 255, 0.12);
         background: rgba(255, 255, 255, 0.02);
@@ -242,14 +351,15 @@
         color: var(--text);
       }
 
-      /* Contact form */
+      /* Contact */
       form {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 12px;
         margin-top: 16px;
       }
-      input, textarea {
+      input,
+      textarea {
         width: 100%;
         padding: 12px 12px;
         border-radius: 12px;
@@ -264,7 +374,10 @@
         min-height: 120px;
         resize: vertical;
       }
-      input::placeholder, textarea::placeholder { color: rgba(255, 255, 255, 0.38); }
+      input::placeholder,
+      textarea::placeholder {
+        color: rgba(255, 255, 255, 0.38);
+      }
       .form-actions {
         grid-column: 1 / -1;
         display: flex;
@@ -272,7 +385,10 @@
         align-items: center;
         flex-wrap: wrap;
       }
-      .note { color: var(--muted2); font-size: 12px; }
+      .note {
+        color: var(--muted2);
+        font-size: 12px;
+      }
 
       /* Footer */
       footer {
@@ -288,17 +404,30 @@
         justify-content: space-between;
         flex-wrap: wrap;
       }
-      .footer-tag { color: rgba(255,255,255,0.52); letter-spacing: 0.6px; }
+      .footer-tag {
+        color: rgba(255, 255, 255, 0.52);
+        letter-spacing: 0.6px;
+      }
 
       /* Responsive */
       @media (max-width: 900px) {
-        .hero-grid { grid-template-columns: 1fr; }
-        .menu { display: none; }
-        .hero-logo { height: 120px; }
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+        .menu {
+          display: none;
+        }
+        .hero-logo {
+          height: 120px;
+        }
       }
       @media (max-width: 720px) {
-        .grid-2 { grid-template-columns: 1fr; }
-        form { grid-template-columns: 1fr; }
+        .grid-2 {
+          grid-template-columns: 1fr;
+        }
+        form {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
@@ -309,7 +438,7 @@
       <div class="wrap nav-inner">
         <div class="brand">
           <a href="#" aria-label="RABE Home">
-            <!-- ✅ Keep it working: favicon.png -->
+            <!-- Keep existing filename -->
             <img src="favicon.png" alt="RABE" class="logo-img" />
           </a>
         </div>
@@ -333,7 +462,7 @@
         <div>
           <div class="kicker"><span class="dot" aria-hidden="true"></span> Presence. Legacy. Narrative.</div>
 
-          <!-- ✅ Keep it working: logo-full.png -->
+          <!-- Full logo (no slogan) -->
           <img src="logo-full.png" class="hero-logo" alt="RABE Logo" />
 
           <p class="hero-sub">
@@ -347,7 +476,6 @@
           </div>
         </div>
 
-        <!-- ✅ Restored: Ecosystem card -->
         <aside class="card hero-card" aria-label="Overview">
           <div class="title">Ecosystem</div>
           <ul>
@@ -361,6 +489,43 @@
       </div>
     </header>
 
+    <!-- FOUNDER -->
+    <section class="founder">
+      <div class="wrap">
+        <div class="card founder-card">
+          <div class="founder-title">About the Author — Founder of RABE / Human Presence Project</div>
+
+          <p><strong>I am not a philosopher.<br />I am a storyteller.</strong></p>
+
+          <p>
+            What I observe, I translate. Into language. Into structure. Into digital spaces. Into systems that hold human
+            presence without forcing it.
+          </p>
+
+          <p>
+            Everything I create — whether literary, strategic, or technological — carries the same lens. Sometimes it appears as
+            humour. Sometimes as critique. Sometimes as restraint. Sometimes as silence.
+          </p>
+
+          <p>The tone shifts. The perspective does not.</p>
+
+          <p>This is not romanticism. It is observation.</p>
+
+          <p>
+            Through RABE and the Human Presence Project, I explore how people inhabit rooms, institutions, digital environments,
+            and their own becoming — and how small structural changes can restore dignity, breath, and permission to exist.
+          </p>
+
+          <p>What you encounter here is not performance. It is how I see.</p>
+
+          <div class="founder-signature">
+            — Emilia Benneh
+            <div class="founder-role">Founder of RABE / Human Presence Project</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- HUMAN SYSTEMS -->
     <section id="human">
       <div class="wrap">
@@ -370,6 +535,7 @@
         </div>
 
         <div class="grid-2">
+          <!-- DI -->
           <article class="card block">
             <h3>DI — Human Presence Framework</h3>
             <div class="meta">Care institutions • Hospitality • Structured settings</div>
@@ -384,11 +550,14 @@
               <li>Bring meaning back to waiting and transition moments</li>
             </ul>
             <div class="actions-row">
-              <a class="btn gold" href="mailto:emiliabenneh@gmail.com?subject=DI%20—%20Institutional%20Inquiry">Institutional inquiries</a>
+              <a class="btn gold" href="mailto:emiliabenneh@gmail.com?subject=DI%20—%20Institutional%20Inquiry"
+                >Institutional inquiries</a
+              >
               <a class="btn" href="#contact">Contact</a>
             </div>
           </article>
 
+          <!-- Events -->
           <article class="card block">
             <h3>RABE Event Management</h3>
             <div class="meta">Operational platform • Events • Staffing coordination</div>
@@ -426,6 +595,7 @@
         </div>
 
         <div class="grid-2">
+          <!-- HITH -->
           <article class="card block">
             <h3>HITH Bot</h3>
             <div class="meta">Telegram • WhatsApp • Private reflection</div>
@@ -442,6 +612,7 @@
             </div>
           </article>
 
+          <!-- Legacy -->
           <article class="card block">
             <h3>Legacy App</h3>
             <div class="meta">Digital memory • Future messages • Family continuity</div>
@@ -479,13 +650,15 @@
             <a class="linkchip" href="#" target="_blank" rel="noopener">Instagram</a>
             <a class="linkchip" href="https://www.youtube.com/@Rabemultimedia" target="_blank" rel="noopener">YouTube</a>
             <a class="linkchip" href="https://suno.com/invite/@rabesongs" target="_blank" rel="noopener">Suno</a>
-            <a class="linkchip" href="https://www.linkedin.com/in/emilia-benneh-071416170/" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="linkchip" href="https://www.facebook.com/profile.php?id=61578447634779" target="_blank" rel="noopener">Facebook</a>
+            <a class="linkchip" href="https://www.linkedin.com/in/emilia-benneh-071416170/" target="_blank" rel="noopener"
+              >LinkedIn</a
+            >
+            <a class="linkchip" href="https://www.facebook.com/profile.php?id=61578447634779" target="_blank" rel="noopener"
+              >Facebook</a
+            >
           </div>
 
-          <p class="note" style="margin-top: 14px">
-            Tip: keep this section link-only for v1. No embedded feeds. Clean exits.
-          </p>
+          <p class="note" style="margin-top: 14px">Tip: keep this section link-only for v1. No embedded feeds. Clean exits.</p>
         </div>
       </div>
     </section>
@@ -524,7 +697,7 @@
           © <span id="year"></span> RABE. All rights reserved.
           <span class="footer-tag"> — The soul of Legacy is RABE.</span>
         </div>
-        <div style="display:flex; gap:12px; align-items:center;">
+        <div style="display: flex; gap: 12px; align-items: center">
           <a href="#human">Human</a>
           <a href="#digital">Digital</a>
           <a href="#culture">Culture</a>
@@ -549,8 +722,9 @@
           `Email: ${decodeURIComponent(email)}\n\n` +
           `${decodeURIComponent(message)}`;
 
-        window.location.href =
-          `mailto:emiliabenneh@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = `mailto:emiliabenneh@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+          body
+        )}`;
       });
     </script>
   </body>
